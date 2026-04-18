@@ -22,7 +22,7 @@ yay -S llmfs
 
 ### Все системы / All systems
 Требуется Python 3.8+ / Requires Python 3.8+
-wget https://raw.githubusercontent.com/НИК/llmfs/main/llmfs.py
+wget https://raw.githubusercontent.com/zaraiskij/llmfs/main/llmfs.py
 chmod +x llmfs.py
 python3 llmfs.py
 
