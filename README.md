@@ -18,18 +18,18 @@ Jan, KoboldCpp, TabbyML, llama.cpp.
 ## Установка / Install
 
 ### Arch Linux (yay)
-yay -S llmfsc
+yay -S llmfs
 
 ### Все системы / All systems
 Требуется Python 3.8+ / Requires Python 3.8+
-wget https://raw.githubusercontent.com/НИК/llmfsc/main/llmfsc.py
-chmod +x llmfsc.py
-python3 llmfsc.py
+wget https://raw.githubusercontent.com/НИК/llmfs/main/llmfs.py
+chmod +x llmfs.py
+python3 llmfs.py
 
 ## Использование / Usage
 
-python3 llmfsc.py
-python3 llmfsc.py --lang en
+python3 llmfs.py
+python3 llmfs.py --lang en
 
 ## Меню / Menu
 
