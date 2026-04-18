@@ -21,7 +21,7 @@ jobs:
         run: pip install pyinstaller
 
       - name: Build binary
-        run: pyinstaller --onefile llmfs091.py -n llmfs-macos-arm64
+        run: pyinstaller --onefile llmfs.py -n llmfs-macos-arm64
 
       - name: Upload to release
         uses: softprops/action-gh-release@v2
