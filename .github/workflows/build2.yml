@@ -1,0 +1,54 @@
+name: Build macOS binaries
+
+"on":
+  release:
+    types: [published]
+
+jobs:
+  build-macos-arm64:
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          architecture: arm64
+
+      - name: Install PyInstaller
+        run: pip install pyinstaller
+
+      - name: Build binary
+        run: pyinstaller --onefile llmfs.py -n llmfs-macos-arm64
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/llmfs-macos-arm64
+
+  build-macos-x86_64:
+    runs-on: macos-13
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          architecture: x64
+
+      - name: Install PyInstaller
+        run: pip install pyinstaller
+
+      - name: Build binary
+        run: pyinstaller --onefile llmfs.py -n llmfs-macos-x86_64
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/llmfs-macos-x86_64
