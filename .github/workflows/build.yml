@@ -1,6 +1,6 @@
 name: Build macOS binaries
 
-on:
+"on":
   release:
     types: [published]
 
